@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Way Tree Surgeon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,7 +33,6 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -52,10 +51,10 @@
         }
 
         #hero {
-            background:   <img src="attachments/IMG-20241204-WA0009.jpg" alt="Tree work 1"> no-repeat center center/cover;
+            background-color: #27ae60;
             color: #fff;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
         }
 
         #hero h2 {
@@ -120,12 +119,10 @@
         footer p {
             margin: 0;
         }
-
         form label {
             display: block;
             margin: 10px 0 5px;
         }
-
         form input, form textarea, form button {
             width: 100%;
             padding: 10px;
@@ -133,25 +130,15 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         form button {
             background: #444;
             color: #fff;
             border: none;
             cursor: pointer;
         }
-
         form button:hover {
             background: #555;
         }
-
-        #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2rem;
-        }
-
         #gallery img {
             width: 100%;
             max-width: 300px;
@@ -160,57 +147,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Image slider styles */
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slides {
+        #gallery {
             display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slides img {
-            width: 100%;
-            height: auto;
-        }
-
-        .slider-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .slider-controls i {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        @media (max-width: 768px) {
-            #hero h2 {
-                font-size: 1.8rem;
-            }
-
-            #hero p {
-                font-size: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
         }
     </style>
 </head>
@@ -232,7 +173,7 @@
         <section id="hero">
             <h2>Your Trusted Tree Care Experts</h2>
             <p>Professional tree services in your area.</p>
-            <button>Contact Us</button>
+            
         </section>
 
         <section id="services">
@@ -259,10 +200,30 @@
             </ul>
         </section>
 
+
+          <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="Phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="hidden" name="access_key" value="25827061-1f83-4cd8-ab28-045b2cec9173">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
         <section id="gallery">
             <h2>Gallery</h2>
-            <div class="slider">
-                <div class="slides">
+            <div>
                 <img src="attachments/IMG-20241204-WA0009.jpg" alt="Tree work 1">
                 <img src="attachments/IMG-20241204-WA0010.jpg" alt="Tree work 2">
                 <img src="attachments/IMG-20241204-WA0011.jpg" alt="Tree work 3">
@@ -287,41 +248,21 @@
                 <img src="attachments/IMG-20241204-WA0030.jpg" alt="Tree work 5">
                 <img src="attachments/IMG-20241204-WA0031.jpg" alt="Tree work 5">
                 <img src="attachments/IMG-20241204-WA0032.jpg" alt="Tree work 5">
-                </div>
-                <div class="slider-controls">
-                    <i class="fas fa-chevron-left" id="prev"></i>
-                    <i class="fas fa-chevron-right" id="next"></i>
-                </div>
+                <!-- Add more images as needed -->
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="Phone">Phone:</label>
-                <input type="text" id="phone" name="phone" required>
-              <label  for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                
-                <button type="submit">Send Message</button>
-            </form>
+            <p>
+                <strong>Phone:</strong> 0870376786<br>
+                <strong>Email:</strong> Example@gmail.com<br>
+                <strong>Address:</strong> Athlone
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Best Way Tree Surgeon. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
         <p>&copy; 2023 Best Way Tree Surgeon</p>
     </footer>
 </body>
