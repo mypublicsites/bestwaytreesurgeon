@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Way Tree Surgeon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,6 +33,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -51,10 +52,10 @@
         }
 
         #hero {
-            background-color: #27ae60;
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
         }
 
         #hero h2 {
@@ -119,10 +120,12 @@
         footer p {
             margin: 0;
         }
+
         form label {
             display: block;
             margin: 10px 0 5px;
         }
+
         form input, form textarea, form button {
             width: 100%;
             padding: 10px;
@@ -130,15 +133,25 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         form button {
             background: #444;
             color: #fff;
             border: none;
             cursor: pointer;
         }
+
         form button:hover {
             background: #555;
         }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
         #gallery img {
             width: 100%;
             max-width: 300px;
@@ -147,11 +160,57 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        #gallery {
+        /* Image slider styles */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-controls i {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -173,7 +232,7 @@
         <section id="hero">
             <h2>Your Trusted Tree Care Experts</h2>
             <p>Professional tree services in your area.</p>
-            
+            <button>Contact Us</button>
         </section>
 
         <section id="services">
@@ -200,13 +259,27 @@
             </ul>
         </section>
 
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://via.placeholder.com/800x400" alt="Tree work 1">
+                    <img src="https://via.placeholder.com/800x400" alt="Tree work 2">
+                    <img src="https://via.placeholder.com/800x400" alt="Tree work 3">
+                </div>
+                <div class="slider-controls">
+                    <i class="fas fa-chevron-left" id="prev"></i>
+                    <i class="fas fa-chevron-right" id="next"></i>
+                </div>
+            </div>
+        </section>
 
-          <section id="contact" class="contact">
+        <section id="contact">
             <h2>Contact Us</h2>
             <form action="https://api.web3forms.com/submit" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="Phone">Phone:</label>
                 <input type="text" id="phone" name="phone" required>
 
