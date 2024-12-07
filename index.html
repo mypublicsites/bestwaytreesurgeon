@@ -174,27 +174,20 @@
             right: 10px;
         }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            #hero h2 {
-                font-size: 2rem;
-            }
-
-            #hero p {
-                font-size: 1rem;
-            }
-
-            #services, #areas-covered, #contact {
-                padding: 1rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
+           .social-media-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .social-media-links a {
+            text-decoration: none;
+            color: #000;
+        }
+        .social-media-links img {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -306,6 +299,18 @@
                 <strong>Address:</strong> Athlone
             </p>
         </section>
+         <h1>Follow Us on Social Media</h1>
+    <div class="social-media-links">
+        <a href="https://www.instagram.com/bestwaytreesurgeon/" target="_blank" title="Instagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://m.facebook.com/profile.php?id=61570209569541&__n=K" target="_blank" title="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.tiktok.com/@best.way.tree.sur?_t=8s1n5ZruFWq&_r=1" target="_blank" title="TikTok">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+        </a>
+    </div>
     </main>
 
     <footer>
