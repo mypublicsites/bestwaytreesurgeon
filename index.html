@@ -5,9 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Way Tree Surgeon</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Existing styles... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+
+        #hero {
+            background-color: #27ae60;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        #hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        main section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #services, #areas-covered, #contact, #gallery {
+            background-color: #fff;
+            margin: 1rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Limit the maximum width */
+        }
+
+        h2 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
 
         footer {
             background-color: #2ecc71;
@@ -21,19 +107,94 @@
             margin: 0;
         }
 
-        .social-media {
-            margin-top: 1rem;
+        form label {
+            display: block;
+            margin: 10px 0 5px;
         }
 
-        .social-media a {
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #444;
             color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .social-media a:hover {
-            color: #27ae60;
+        form button:hover {
+            background: #555;
+        }
+
+        /* Slider Styles */
+        .slider {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            #hero h2 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            #services, #areas-covered, #contact {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -96,97 +257,4 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <input type="hidden" name="access_key" value="25827061-1f83-4cd8-ab28-045b2cec9173">
-                <button type="submit">Send</button>
-            </form>
-        </section>
-
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="slider">
-                <div class="slides">
-                    <img src="attachments/IMG-20241204-WA0009.jpg" alt="Tree work 1">
-                    <img src="attachments/IMG-20241204-WA0010.jpg" alt="Tree work 2">
-                    <img src="attachments/IMG-20241204-WA0011.jpg" alt="Tree work 3">
-                    <img src="attachments/IMG-20241204-WA0012.jpg" alt="Tree work 4">
-                    <img src="attachments/IMG-20241204-WA0013.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0014.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0015.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0016.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0017.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0018.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0019.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0020.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0021.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0022.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0023.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0024.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0025.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0026.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0027.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0028.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0029.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0030.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0031.jpg" alt="Tree work 5">
-                    <img src="attachments/IMG-20241204-WA0032.jpg" alt="Tree work 5">
-                </div>
-                <button class="button prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="button next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </section>
-
-        <section id="contact-details">
-            <h2>Contact Details</h2>
-            <p>
-                <strong>Phone:</strong> 0870376786<br>
-                <strong>Email:</strong> Example@gmail.com<br>
-                <strong>Address:</strong> Athlone
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Best Way Tree Surgeon</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </footer>
-
-    <script>
-        let slideIndex = 0;
-
-        function showSlides() {
-            const slides = document.querySelectorAll('.slides img');
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1; 
-            }    
-            slides[slideIndex - 1].style.display = 'block';  
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-        function moveSlide(n) {
-            slideIndex += n;
-            const slides = document.querySelectorAll('.slides img');
-            if (slideIndex < 1) {
-                slideIndex = slides.length; 
-            } else if (slideIndex > slides.length) {
-                slideIndex = 1; 
-            }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';  
-            }
-            slides[slideIndex - 1].style.display = 'block';  
-        }
-
-        showSlides(); // Initial call to start the slideshow
-    </script>
-</body>
-</html>
+                <textarea id="message" name="message" rows="5" required>
