@@ -257,4 +257,92 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="hidden" name="access_key" value="25827061-1f83-4cd8-ab28-045b2cec9173">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="attachments/IMG-20241204-WA0009.jpg" alt="Tree work 1">
+                    <img src="attachments/IMG-20241204-WA0010.jpg" alt="Tree work 2">
+                    <img src="attachments/IMG-20241204-WA0011.jpg" alt="Tree work 3">
+                    <img src="attachments/IMG-20241204-WA0012.jpg" alt="Tree work 4">
+                    <img src="attachments/IMG-20241204-WA0013.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0014.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0015.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0016.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0017.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0018.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0019.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0020.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0021.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0022.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0023.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0024.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0025.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0026.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0027.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0028.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0029.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0030.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0031.jpg" alt="Tree work 5">
+                    <img src="attachments/IMG-20241204-WA0032.jpg" alt="Tree work 5">
+                </div>
+                <button class="button prev" onclick="moveSlide(-1)">❮</button>
+                <button class="button next" onclick="moveSlide(1)">❯</button>
+            </div>
+        </section>
+
+        <section id="contact-details">
+            <h2>Contact Details</h2>
+            <p>
+                <strong>Phone:</strong> 0870376786<br>
+                <strong>Email:</strong> Example@gmail.com<br>
+                <strong>Address:</strong> Athlone
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Best Way Tree Surgeon</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slides img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1; 
+            }    
+            slides[slideIndex - 1].style.display = 'block';  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            const slides = document.querySelectorAll('.slides img');
+            if (slideIndex < 1) {
+                slideIndex = slides.length; 
+            } else if (slideIndex > slides.length) {
+                slideIndex = 1; 
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';  
+            }
+            slides[slideIndex - 1].style.display = 'block';  
+        }
+
+        showSlides(); // Initial call to start the slideshow
+    </script>
+</body>
+</html>
